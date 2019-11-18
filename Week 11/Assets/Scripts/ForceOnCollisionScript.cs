@@ -16,8 +16,9 @@ public class ForceOnCollisionScript : MonoBehaviour
         
     }
 
+    //OnCollisionEnter2D is called when objects with 2D physics collide
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("HIT!");
+        print("HIT!"); //print hit
     }
 }

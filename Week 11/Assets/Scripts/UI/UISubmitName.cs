@@ -12,11 +12,12 @@ public class UISubmitName : MonoBehaviour
     public string welcomeText;
     public string replaceWithName;
 
+    //Gets the name submitted by the player and updates the text to welcome them
     public void SubmitName(){
-        print("SubmitName called: " + nameText.text);
+        print("SubmitName called: " + nameText.text); //print out the submit name
 
-        string[] names = nameText.text.Split(' ');
+        string[] names = nameText.text.Split(' '); //split the name to just get the first name
 
-        titleText.text = welcomeText.Replace(replaceWithName, names[0]);
+        titleText.text = welcomeText.Replace(replaceWithName, names[0]); //replace replaceWithName with the first name the player submitted in welcome text
     }
 }

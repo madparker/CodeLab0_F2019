@@ -16,6 +16,7 @@ public class SayHelloScript : MonoBehaviour
         
     }
 
+    //Called by a button click, just prints "Hello" to the console
     public void SayHello(){
         print("HEllo!");
     }

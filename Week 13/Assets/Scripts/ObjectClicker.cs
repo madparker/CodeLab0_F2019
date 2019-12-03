@@ -5,11 +5,13 @@ using UnityEngine;
 public class ObjectClicker : MonoBehaviour
 {
     ParticleSystem particleSystem;
+    GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        particleSystem = GetComponent<ParticleSystem>(); //get the ParticleSystem from this gameObject 
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>(); //fine the GameManager component in this scene
     }
 
     // Update is called once per frame
@@ -26,6 +28,8 @@ public class ObjectClicker : MonoBehaviour
                 {
                     particleSystem.ToggleParticleSystem();
                     print("Clicked on: " + gameObject.name);//then print to console
+                    //proint out the weapon name this object was mapped to in GameManager
+                    print("You have select your weapon. Enjoy using the " + gm.objectWeaponName[gameObject]);
                 }
             }
         }
